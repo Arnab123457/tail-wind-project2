@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarHut - Premium Car Dealership</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black">
+
+    <header class="absolute top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm border-b border-white/10">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex items-center justify-between py-4 md:py-6">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <a href="index.html"><i class="fas fa-car text-white text-xl md:text-2xl"></i>
+                    <span class="text-white text-lg md:text-xl font-semibold">CarHut</span></a>
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <nav id="desktopNav" class="hidden lg:flex items-center space-x-1 bg-black/30 backdrop-blur-sm border border-gray-600 rounded-full px-2 py-2">
+                    <a href="#home" class="text-white text-sm px-4 xl:px-6 py-2 rounded-full hover:bg-white/10 transition">Home</a>
+                    <a href="#about" class="text-white text-sm px-4 xl:px-6 py-2 rounded-full hover:bg-white/10 transition">About Us</a>
+                    <a href="#vehicles" class="text-white text-sm px-4 xl:px-6 py-2 rounded-full hover:bg-white/10 transition">Vehicles</a>
+                    <a href="#details" class="text-white text-sm px-4 xl:px-6 py-2 rounded-full hover:bg-white/10 transition">Car Details</a>
+                    <a href="#contact" class="text-white text-sm px-4 xl:px-6 py-2 rounded-full hover:bg-white/10 transition">Contact Us</a>
+                    <a href="#cart" class="text-white text-sm px-4 xl:px-6 py-2 rounded-full hover:bg-white/10 transition">Cart(0)</a>
+                </nav>
+
+                <!-- Create Account Button (Desktop) -->
+                <a href="#create-account" class="hidden lg:block bg-white text-black px-6 xl:px-8 py-2 xl:py-3 rounded-full font-semibold hover:bg-blue-700 hover:text-white transition text-sm">
+                    Create Account
+                </a>
+
+                <!-- Hamburger Menu Button -->
+                <button id="hamburger" class="lg:hidden text-white text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden lg:hidden bg-black/95 backdrop-blur-md border-t border-gray-700">
+            <nav class="container mx-auto px-4 py-4 flex flex-col space-y-3">
+                <a href="#home" class="text-white px-4 py-3 rounded-lg hover:bg-white/10 transition">Home</a>
+                <a href="#about" class="text-white px-4 py-3 rounded-lg hover:bg-white/10 transition">About Us</a>
+                <a href="#vehicles" class="text-white px-4 py-3 rounded-lg hover:bg-white/10 transition">Vehicles</a>
+                <a href="#details" class="text-white px-4 py-3 rounded-lg hover:bg-white/10 transition">Car Details</a>
+                <a href="#contact" class="text-white px-4 py-3 rounded-lg hover:bg-white/10 transition">Contact Us</a>
+                <a href="#cart" class="text-white px-4 py-3 rounded-lg hover:bg-white/10 transition">Cart(0)</a>
+                <a href="#create-account" class="bg-white text-black px-4 py-3 rounded-lg font-semibold hover:bg-gray-200 transition text-center">
+                    Create Account
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section id="home" class="relative h-[70vh] md:h-[80vh] overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="images/banner-img (3).png" alt="Ranger Black" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black opacity-70"></div>
+        </div>
+
+        <!-- Content -->
+        <div class="relative container mx-auto px-4 md:px-6 h-full flex items-center pt-20 md:pt-0">
+            <div class="max-w-full md:max-w-2xl">
+                <!-- Built to Inspire -->
+                <div class="mb-3 md:mb-4">
+                    <span class="text-gray-400 text-xs md:text-sm tracking-widest uppercase">Built to</span>
+                    <span class="text-white text-xs md:text-sm tracking-widest uppercase ml-2">INSPIRE</span>
+                </div>
+
+                <!-- Main Heading -->
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-4 md:mb-6 leading-tight">
+                    <span class="text-white">Ranger </span>
+                    <span class="text-white">Black</span>
+                </h1>
+
+                <!-- Description -->
+                <p class="text-gray-400 text-sm md:text-base lg:text-lg mb-6 md:mb-8 max-w-full md:max-w-xl leading-relaxed">
+                    Lorem ipsum dolor sit amet consectetur. Aliquam aliquet enim aliquot nunc placerat qui tristique. Turpis aliquam morbi at suscipit pretium orci.
+                </p>
+
+                <!-- Discover More Button -->
+                <a href="#discover" class="inline-flex items-center space-x-3 border border-white text-white px-6 md:px-8 py-3 md:py-4 rounded-full hover:bg-white hover:text-black transition group text-sm md:text-base">
+                    <span class="font-medium">Discover More</span>
+                    <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="absolute bottom-4 md:bottom-12 left-0 right-0">
+            <div class="container mx-auto px-4 md:px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4 bg-black/40 backdrop-blur-md border border-gray-700 rounded-xl md:rounded-2xl p-4 md:p-8">
+                    <!-- Stat 1 -->
+                    <div class="text-center border-r border-gray-700 last:border-r-0">
+                        <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2">50+</div>
+                        <div class="text-gray-400 text-xs md:text-sm">Project Complete</div>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="text-center border-r border-gray-700 md:border-r last:border-r-0">
+                        <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2">100+</div>
+                        <div class="text-gray-400 text-xs md:text-sm">Expert Teams</div>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="text-center border-r border-gray-700 last:border-r-0">
+                        <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2">$3.5M</div>
+                        <div class="text-gray-400 text-xs md:text-sm">Project Value</div>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="text-center">
+                        <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-1 md:mb-2">$3.5M</div>
+                        <div class="text-gray-400 text-xs md:text-sm">Project Value</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Cars -->
+    <section id="vehicles" class="py-12 md:py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">Featured Vehicles</h2>
+                <p class="text-gray-400 text-sm md:text-base">Browse our hand-picked selection of premium vehicles</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Car 1 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="images/car-13.jpg" alt="Porsche Cayenne" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <div class="text-sm text-teal-400 font-semibold mb-2">SUV</div>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Porsche Cayenne</h3>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-gray-400 text-sm md:text-base">2023</span>
+                            <span class="text-xl md:text-2xl font-bold text-teal-400">$85,000</span>
+                        </div>
+                        <a href="#car-1" class="block w-full bg-teal-400 text-black py-2 md:py-3 rounded-lg hover:bg-teal-700 text-center font-semibold text-sm md:text-base">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Car 2 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="images/car-14.jpg" alt="Mercedes-Benz G-Class" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <div class="text-sm text-teal-400 font-semibold mb-2">SUV</div>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Mercedes-Benz G-Class</h3>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-gray-400 text-sm md:text-base">2023</span>
+                            <span class="text-xl md:text-2xl font-bold text-teal-400">$145,000</span>
+                        </div>
+                        <a href="#car-2" class="block w-full bg-teal-400 text-black py-2 md:py-3 rounded-lg hover:bg-teal-700 text-center font-semibold text-sm md:text-base">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Car 3 -->
+                <div class="bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <img src="images/car-15.jpeg" alt="BMW X7" class="w-full h-48 md:h-64 object-cover">
+                    <div class="p-4 md:p-6">
+                        <div class="text-sm text-teal-400 font-semibold mb-2">SUV</div>
+                        <h3 class="text-xl md:text-2xl font-bold text-white mb-2">BMW X7</h3>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-gray-400 text-sm md:text-base">2024</span>
+                            <span class="text-xl md:text-2xl font-bold text-teal-400">$95,000</span>
+                        </div>
+                        <a href="#car-3" class="block w-full bg-teal-400 text-black py-2 md:py-3 rounded-lg hover:bg-teal-700 text-center font-semibold text-sm md:text-base">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Explore All Vehicles Section -->
+    <section class="py-12 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-8 md:mb-12">
+                <div class="text-gray-600 text-sm md:text-base mb-2">POPULAR RENTAL DEALS</div>
+                <div class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Explore All Vehicles</div>
+            </div>
+
+            <!-- Vehicle Slider Container -->
+            <div class="relative">
+                <!-- Slider Wrapper -->
+                <div class="overflow-hidden">
+                    <div id="vehicleSlider" class="flex transition-transform duration-500 ease-in-out">
+                        <!-- Slide 1 -->
+                        <div class="flex-shrink-0 w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            <!-- Vehicle 1 - Nissan GTR -->
+                            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                                <div class="relative">
+                                    <img src="images/car-4.jpeg" alt="Nissan GTR" class="w-full h-48 object-cover">
+                                    <div class="absolute top-4 right-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100 transition">
+                                        <i class="far fa-heart text-gray-600"></i>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <div class="text-xl font-bold text-gray-900">Nissan GTR</div>
+                                        <div class="flex items-center text-yellow-400">
+                                            <i class="fas fa-star text-sm"></i>
+                                            <span class="text-gray-900 ml-1 text-sm font-semibold">4.8</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-500 text-sm mb-4">Sport</div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-user-friends text-xs"></i>
+                                            <span>2 People</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-cog text-xs"></i>
+                                            <span>Auto</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-2xl font-bold text-gray-900">$80</span>
+                                            <span class="text-gray-500 text-sm">/day</span>
+                                        </div>
+                                        <a href="#rent-1" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-950 transition text-sm font-semibold">
+                                            Rent Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vehicle 2 - Audi R8 -->
+                            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                                <div class="relative">
+                                    <img src="images/car-5.jpeg" alt="Audi R8" class="w-full h-48 object-cover">
+                                    <div class="absolute top-4 right-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100 transition">
+                                        <i class="far fa-heart text-gray-600"></i>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <div class="text-xl font-bold text-gray-900">Audi R8</div>
+                                        <div class="flex items-center text-yellow-400">
+                                            <i class="fas fa-star text-sm"></i>
+                                            <span class="text-gray-900 ml-1 text-sm font-semibold">4.9</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-500 text-sm mb-4">Sport</div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-user-friends text-xs"></i>
+                                            <span>2 People</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-cog text-xs"></i>
+                                            <span>Auto</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-2xl font-bold text-gray-900">$100</span>
+                                            <span class="text-gray-500 text-sm">/day</span>
+                                        </div>
+                                        <a href="#rent-2" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-950 transition text-sm font-semibold">
+                                            Rent Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vehicle 3 - Nissan GTR White -->
+                            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                                <div class="relative">
+                                    <img src="images/car-6.jpeg" alt="Nissan GTR" class="w-full h-48 object-cover">
+                                    <div class="absolute top-4 right-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100 transition">
+                                        <i class="far fa-heart text-gray-600"></i>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <div class="text-xl font-bold text-gray-900">Nissan GTR</div>
+                                        <div class="flex items-center text-yellow-400">
+                                            <i class="fas fa-star text-sm"></i>
+                                            <span class="text-gray-900 ml-1 text-sm font-semibold">4.8</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-500 text-sm mb-4">Sport</div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-user-friends text-xs"></i>
+                                            <span>2 People</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-cog text-xs"></i>
+                                            <span>Auto</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-2xl font-bold text-gray-900">$80</span>
+                                            <span class="text-gray-500 text-sm">/day</span>
+                                        </div>
+                                        <a href="#rent-3" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-950 transition text-sm font-semibold">
+                                            Rent Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="flex-shrink-0 w-full grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                            <!-- Vehicle 4 - Lamborghini -->
+                            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                                <div class="relative">
+                                    <img src="images/car-7.jpeg" alt="Lamborghini" class="w-full h-48 object-cover">
+                                    <div class="absolute top-4 right-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100 transition">
+                                        <i class="far fa-heart text-gray-600"></i>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <div class="text-xl font-bold text-gray-900">Lamborghini</div>
+                                        <div class="flex items-center text-yellow-400">
+                                            <i class="fas fa-star text-sm"></i>
+                                            <span class="text-gray-900 ml-1 text-sm font-semibold">5.0</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-500 text-sm mb-4">Sport</div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-user-friends text-xs"></i>
+                                            <span>2 People</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-cog text-xs"></i>
+                                            <span>Auto</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-2xl font-bold text-gray-900">$150</span>
+                                            <span class="text-gray-500 text-sm">/day</span>
+                                        </div>
+                                        <a href="#rent-4" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-950 transition text-sm font-semibold">
+                                            Rent Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vehicle 5 - Porsche -->
+                            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                                <div class="relative">
+                                    <img src="images/car-8.jpeg" alt="Porsche" class="w-full h-48 object-cover">
+                                    <div class="absolute top-4 right-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100 transition">
+                                        <i class="far fa-heart text-gray-600"></i>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <div class="text-xl font-bold text-gray-900">Porsche 911</div>
+                                        <div class="flex items-center text-yellow-400">
+                                            <i class="fas fa-star text-sm"></i>
+                                            <span class="text-gray-900 ml-1 text-sm font-semibold">4.9</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-500 text-sm mb-4">Sport</div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-user-friends text-xs"></i>
+                                            <span>2 People</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-cog text-xs"></i>
+                                            <span>Auto</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-2xl font-bold text-gray-900">$120</span>
+                                            <span class="text-gray-500 text-sm">/day</span>
+                                        </div>
+                                        <a href="#rent-5" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-950 transition text-sm font-semibold">
+                                            Rent Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Vehicle 6 - Ferrari -->
+                            <div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                                <div class="relative">
+                                    <img src="images/car-9.jpeg" alt="Ferrari" class="w-full h-48 object-cover">
+                                    <div class="absolute top-4 right-4 bg-white rounded-full p-2 cursor-pointer hover:bg-gray-100 transition">
+                                        <i class="far fa-heart text-gray-600"></i>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <div class="text-xl font-bold text-gray-900">Ferrari F8</div>
+                                        <div class="flex items-center text-yellow-400">
+                                            <i class="fas fa-star text-sm"></i>
+                                            <span class="text-gray-900 ml-1 text-sm font-semibold">5.0</span>
+                                        </div>
+                                    </div>
+                                    <div class="text-gray-500 text-sm mb-4">Sport</div>
+                                    <div class="flex items-center gap-4 text-gray-500 text-sm mb-4">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-user-friends text-xs"></i>
+                                            <span>2 People</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fas fa-cog text-xs"></i>
+                                            <span>Auto</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <span class="text-2xl font-bold text-gray-900">$200</span>
+                                            <span class="text-gray-500 text-sm">/day</span>
+                                        </div>
+                                        <a href="#rent-6" class="bg-blue-600 text-white px-5 py-2 rounded-lg hover:bg-blue-950 transition text-sm font-semibold">
+                                            Rent Now
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination Dots -->
+            <div class="flex items-center justify-center gap-2 mt-8">
+                <button class="slider-dot w-3 h-3 bg-blue-600 rounded-full transition-all duration-300" data-slide="0"></button>
+                <button class="slider-dot w-3 h-3 bg-gray-300 rounded-full transition-all duration-300" data-slide="1"></button>
+                  
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-12 md:py-16 bg-gray-200">
+        <div class="container mx-auto px-4">
+            <!-- Section Header -->
+            <div class="text-center mb-12 md:mb-16">
+                <div class="text-3xl md:text-4xl font-bold text-gray-900 mb-2">Why Choose Us?</div>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid lg:grid-cols-3 gap-8 md:gap-12 items-center">
+                <!-- Left Features -->
+                <div class="space-y-8 md:space-y-12">
+                    <!-- Feature 1 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-tags text-orange-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-lg md:text-xl font-bold text-gray-900 mb-2">Special Financing Offers</div>
+                            <div class="text-gray-600 text-sm md:text-base">Our stress-free finance department offers a wide range of options. Find the best plan for you.</div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-shield-alt text-teal-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-lg md:text-xl font-bold text-gray-900 mb-2">Trusted Car Dealership</div>
+                            <div class="text-gray-600 text-sm md:text-base">We have partnered with top local and international brands to serve customers with quality services.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Image -->
+                <div class="flex items-center justify-center">
+                    <img src="images/choose-img.png" alt="Featured Car" class="w-full max-w-md h-auto object-contain">
+                </div>
+
+                <!-- Right Features -->
+                <div class="space-y-8 md:space-y-12">
+                    <!-- Feature 3 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-credit-card text-blue-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-lg md:text-xl font-bold text-gray-900 mb-2">Transparent Pricing</div>
+                            <div class="text-gray-600 text-sm md:text-base">Get a clear view of all costs, including taxes and fees, before making a decision.</div>
+                        </div>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="flex items-start gap-4">
+                        <div class="flex-shrink-0 w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-headset text-purple-500 text-xl"></i>
+                        </div>
+                        <div>
+                            <div class="text-lg md:text-xl font-bold text-gray-900 mb-2">Expert Support</div>
+                            <div class="text-gray-600 text-sm md:text-base">Our team provides comprehensive assistance, ensuring you find the perfect vehicle for your needs.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 md:py-16 bg-black text-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 text-center">
+                <div>
+                    <div class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">500+</div>
+                    <div class="text-gray-400 text-sm md:text-base">Cars Available</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">1,200+</div>
+                    <div class="text-gray-400 text-sm md:text-base">Happy Customers</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">25+</div>
+                    <div class="text-gray-400 text-sm md:text-base">Years Experience</div>
+                </div>
+                <div>
+                    <div class="text-3xl md:text-4xl lg:text-5xl font-bold mb-2">50+</div>
+                    <div class="text-gray-400 text-sm md:text-base">Expert Staff</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Listings -->
+    <section id="details" class="py-12 md:py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">Latest Listings</h2>
+                <p class="text-gray-400 text-sm md:text-base">Check out our newest arrivals</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Listing 1 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="images/car-10.jpeg" alt="Range Rover Sport" class="w-full h-48 md:h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-teal-400 text-black px-3 py-1 rounded-full text-xs md:text-sm font-semibold">New</div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-3">Range Rover Sport</h3>
+                        <div class="space-y-2 mb-4 text-gray-400 text-sm md:text-base">
+                            <div class="flex items-center">
+                                <i class="far fa-calendar mr-2"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-cog mr-2"></i>
+                                <span>Automatic</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>5,000 km</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl md:text-2xl font-bold text-teal-400">$95,000</span>
+                            <a href="#details-1" class="bg-white text-black h px-4 md:px-6 py-2 rounded-lg hover:bg-blue-700 hover:text-white font-semibold text-sm md:text-base">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 2 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="images/car-11.jpeg" alt="Audi Q8" class="w-full h-48 md:h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-teal-400 text-black px-3 py-1 rounded-full text-xs md:text-sm font-semibold">New</div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-3">Audi Q8</h3>
+                        <div class="space-y-2 mb-4 text-gray-400 text-sm md:text-base">
+                            <div class="flex items-center">
+                                <i class="far fa-calendar mr-2"></i>
+                                <span>2023</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-cog mr-2"></i>
+                                <span>Automatic</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>12,000 km</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl md:text-2xl font-bold text-teal-400">$78,000</span>
+                            <a href="#details-2" class="bg-white text-black px-4 md:px-6 py-2 rounded-lg hover:bg-blue-700 hover:text-white font-semibold text-sm md:text-base">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 3 -->
+                <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition">
+                    <div class="relative">
+                        <img src="images/car-12.jpeg" alt="Lexus RX 350" class="w-full h-48 md:h-56 object-cover">
+                        <div class="absolute top-4 right-4 bg-teal-400 text-black px-3 py-1 rounded-full text-xs md:text-sm font-semibold">New</div>
+                    </div>
+                    <div class="p-4 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-white mb-3">Lexus RX 350</h3>
+                        <div class="space-y-2 mb-4 text-gray-400 text-sm md:text-base">
+                            <div class="flex items-center">
+                                <i class="far fa-calendar mr-2"></i>
+                                <span>2024</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-cog mr-2"></i>
+                                <span>Automatic</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-map-marker-alt mr-2"></i>
+                                <span>3,000 km</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xl md:text-2xl font-bold text-teal-400">$68,000</span>
+                            <a href="#details-3" class="bg-white text-black px-4 md:px-6 py-2 rounded-lg hover:bg-blue-700 hover:text-white font-semibold text-sm md:text-base">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="about" class="py-12 md:py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">Our Services</h2>
+                <p class="text-gray-400 text-sm md:text-base">Everything you need for your automotive journey</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Service 1 -->
+                <a href="#search" class="text-center p-4 md:p-6 block hover:bg-gray-900 rounded-lg transition border border-gray-800">
+                    <div class="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-teal-400/20 rounded-full mb-4">
+                        <i class="fas fa-search text-teal-400 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">Vehicle Search</h3>
+                    <p class="text-gray-400 text-sm md:text-base">Find your perfect car with our advanced search</p>
+                </a>
+
+                <!-- Service 2 -->
+                <a href="#maintenance" class="text-center p-4 md:p-6 block hover:bg-gray-900 rounded-lg transition border border-gray-800">
+                    <div class="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-teal-400/20 rounded-full mb-4">
+                        <i class="fas fa-tools text-teal-400 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">Maintenance</h3>
+                    <p class="text-gray-400 text-sm md:text-base">Expert service and maintenance support</p>
+                </a>
+
+                <!-- Service 3 -->
+                <a href="#consultation" class="text-center p-4 md:p-6 block hover:bg-gray-900 rounded-lg transition border border-gray-800">
+                    <div class="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-teal-400/20 rounded-full mb-4">
+                        <i class="fas fa-phone text-teal-400 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">Consultation</h3>
+                    <p class="text-gray-400 text-sm md:text-base">Professional buying advice and guidance</p>
+                </a>
+
+                <!-- Service 4 -->
+                <a href="#financing" class="text-center p-4 md:p-6 block hover:bg-gray-900 rounded-lg transition border border-gray-800">
+                    <div class="inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 bg-teal-400/20 rounded-full mb-4">
+                        <i class="fas fa-star text-teal-400 text-xl md:text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg md:text-xl font-bold text-white mb-2">Financing</h3>
+                    <p class="text-gray-400 text-sm md:text-base">Flexible financing options available</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-12 md:py-16 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-8 md:mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-3 md:mb-4">What Our Clients Say</h2>
+                <p class="text-gray-400 text-sm md:text-base">Real experiences from satisfied customers</p>
+            </div>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm md:text-base">Excellent service and great selection of vehicles. Highly recommended!</p>
+                    <div class="flex items-center">
+                        <img src="images/John Smith.jpeg" alt="John Smith" class="w-10 h-10 md:w-12 md:h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-bold text-white text-sm md:text-base">John Smith</div>
+                            <div class="text-xs md:text-sm text-gray-400">Business Owner</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm md:text-base">Professional staff and smooth buying process. Very satisfied with my purchase.</p>
+                    <div class="flex items-center">
+                        <img src="images/Sarah Johnson.jpeg" alt="Sarah Johnson" class="w-10 h-10 md:w-12 md:h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-bold text-white text-sm md:text-base">Sarah Johnson</div>
+                            <div class="text-xs md:text-sm text-gray-400">Marketing Director</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                        <i class="fas fa-star text-yellow-400 text-sm"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 text-sm md:text-base">Best car dealership experience I've had. Will definitely come back!</p>
+                    <div class="flex items-center">
+                        <img src="images/Michael Brown.jpeg" alt="Michael Brown" class="w-10 h-10 md:w-12 md:h-12 rounded-full mr-4">
+                        <div>
+                            <div class="font-bold text-white text-sm md:text-base">Michael Brown</div>
+                            <div class="text-xs md:text-sm text-gray-400">Entrepreneur</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-black text-white py-8 md:py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <div>
+                    <a href="index.html"><i class="fas fa-car text-white text-xl md:text-2xl"></i>
+                    <span class="text-white text-lg md:text-xl font-semibold">CarHut</span></a>
+                    <div class="text-gray-400 text-sm md:text-base">Your trusted partner for premium vehicles since 1999</div>
+                </div>
+                <div>
+                    <div class="font-bold mb-3 md:mb-4 text-base md:text-lg">Quick Links</div>
+                    <div class="space-y-2 text-gray-400 text-sm md:text-base">
+                        <div><a href="#about" class="hover:text-teal-400">About Us</a></div>
+                        <div><a href="#vehicles" class="hover:text-teal-400">Inventory</a></div>
+                        <div><a href="#about" class="hover:text-teal-400">Services</a></div>
+                        <div><a href="#contact" class="hover:text-teal-400">Contact</a></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-bold mb-3 md:mb-4 text-base md:text-lg">Contact</div>
+                    <div class="space-y-2 text-gray-400 text-sm md:text-base">
+                        <div class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-teal-400"></i>
+                            <a href="tel:+15551234567" class="hover:text-teal-400">+1 (555) 123-4567</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-teal-400"></i>
+                            <a href="mailto:info@carhut.com" class="hover:text-teal-400">info@carhut.com</a>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-teal-400"></i>
+                            <a href="#location" class="hover:text-teal-400">123 Auto Plaza, NY</a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="font-bold mb-3 md:mb-4 text-base md:text-lg">Hours</div>
+                    <div class="space-y-2 text-gray-400 text-sm md:text-base">
+                        <div>Monday - Friday: 9am - 7pm</div>
+                        <div>Saturday: 10am - 6pm</div>
+                        <div>Sunday: Closed</div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 md:mt-8 pt-6 md:pt-8 text-center text-gray-400 text-sm md:text-base">
+                <div>&copy; 2024 <a href="index.html" class="hover:text-teal-400">CarHut</a>. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = hamburger.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = hamburger.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Vehicle Slider
+        const slider = document.getElementById('vehicleSlider');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+
+        function goToSlide(slideIndex) {
+            currentSlide = slideIndex;
+            slider.style.transform = `translateX(-${slideIndex * 100}%)`;
+            
+            // Update dots
+            dots.forEach((dot, index) => {
+                if (index === slideIndex) {
+                    dot.classList.remove('bg-gray-300');
+                    dot.classList.add('bg-blue-600');
+                } else {
+                    dot.classList.remove('bg-blue-600');
+                    dot.classList.add('bg-gray-300');
+                }
+            });
+        }
+
+        // Add click events to dots
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                goToSlide(index);
+            });
+        });
+
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % 2;
+            goToSlide(currentSlide);
+        }, 5000);
+    </script>
+</body>
+</html>
